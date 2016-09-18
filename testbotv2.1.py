@@ -38,12 +38,12 @@ async def on_message(message):
 
 @asyncio.coroutine
 async def checks(message):
-    if message.author != 'YuiBot#6311':
+    if message.author != client.user and (not message.author.bot): # remove the second check if you want to be able to reply to bots
         if message.content == '!off':
                 users[message.author] = False
         elif message.content.startswith('!state ') == True:
             users[message.author] = True
-            if message.mentions == []:
+            if not message.mentions: # empty list assumed to be false
                 await client.send_message(
                     message.channel,
                     '!state requires at least one user to find the state of')
