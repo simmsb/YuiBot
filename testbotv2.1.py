@@ -88,11 +88,7 @@ async def checks(message):
                 '{} roles a {} sided dice, they got: {}'.format(
                     message.author, sides, random.randint(1, int(sides))))
         elif message.content == '!help':
-            await client.send_message(message.channel, 'List of commands:\n\
-!dice [sides]: rolls a dice of [sides] sides\n\
-!img [file1] [file2] [filename]: sends a image from a folder the bot contains\n\
-!sleep: makes the bot sleep for 5 seconds\n\
-!help: sends this message\n!state @[name]: replies with the state of the selected user/s')
+            await client.send_message(message.channel, 'List of commands:\n\!dice [sides]: rolls a dice of [sides] sides\n\!img [file1] [file2] [filename]: sends a image from a folder the bot contains\n\!sleep: makes the bot sleep for 5 seconds\n\!help: sends this message\n!state @[name]: replies with the state of the selected user/s')
         else:
             users[message.author] = False
 
