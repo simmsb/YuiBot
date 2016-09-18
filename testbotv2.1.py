@@ -139,4 +139,4 @@ def find_file(keys = [], directory = '', ftypes = [], matchRate = 0):
         return random.choice(list(upper.keys()))
 
 pattern1 = re.compile('!img * * *')
-client.run('MjIxNDM0NTMzNTEyMzQ3NjQ4.Cquysg.5aAVlJsFNm56Du4Nr2qXSKdiWvU')
+client.run('')
