@@ -38,7 +38,7 @@ async def on_message(message):
 
 @asyncio.coroutine
 async def checks(message):
-    if message.author != 'YuiBot#6311':
+    if message.author != client.user and  (not message.author.bot):
         if message.content == '!off':
                 users[message.author] = False
         elif message.content.startswith('!state ') == True:
